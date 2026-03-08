@@ -43,7 +43,7 @@ function App() {
             const cleanReply = data.reply ? data.reply.replace(/\*/g, '') : '';
         setResponse(cleanReply);
         } catch (err) {
-            setResponse("Connection error. Is the backend running on port 5001?")
+            setResponse("Network Connection Error. Check your connection and try again.")
         } finally {
             setLoading(false)
         }
@@ -72,7 +72,7 @@ function App() {
                         value={inputText}
                         onChange={(e) => setInputText(e.target.value)}
                         placeholder="Paste suspicious text or links here..."
-                        className="w-full px-6 py-4 rounded-2xl bg-white text-lg min-h-[120px] focus:ring-4 focus:ring-blue-500 outline-none"
+                        className="w-full px-6 py-4 rounded-2xl bg-white text-lg min-h-30 focus:ring-4 focus:ring-blue-500 outline-none"
                     />
 
                     <div className="relative group flex flex-col items-center p-6 border-2 border-dashed border-gray-500 rounded-2xl bg-gray-800 transition-all hover:border-blue-400">
